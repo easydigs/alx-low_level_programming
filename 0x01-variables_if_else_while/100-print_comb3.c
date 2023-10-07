@@ -16,11 +16,11 @@ int main(void)
 			{
 				putchar(n + '0');
 				putchar(m + '0');
-				if (n != 9 || m != 9)
-				{
-					putchar(',');
-					putchar(' ');
-				}
+					if (n != 9 || m != 9)
+					{
+						putchar(',');
+						putchar(' ');
+					}
 			}
 		}
 	}
