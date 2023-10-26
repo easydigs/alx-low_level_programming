@@ -1,6 +1,7 @@
 #include "main.h"
 
 int actual_sqrt_recursion(int n, int i);
+
 /**
  * _sqrt_recursion - returns the natual square root of a number
  * @n: number to calculate the square root of
@@ -20,7 +21,6 @@ int _sqrt_recursion(int n)
  * square root of a number
  * @n: number to calculate the square root of
  * @i: iterator
- *
  * Return: the resulting square root
  */
 
