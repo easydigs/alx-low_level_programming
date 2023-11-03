@@ -6,44 +6,41 @@
  * string_nconcat - function that concatenates two strings
  * @s1: string 1
  * @s2: string 2
- * @n: number of bytes to concatenate from
+ * @n: number of element to concatenate from s2
  *
- * Return: NULL
+ * Return: pointer to the new allocated memory
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i;
-	unsigned int s1len = 0;
-	unsigned int s2len = 0;
+	size_t i, j, k;
 	char *output;
 
 	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
-	for (i = 0; s1[i] != '\0'; i++)
-		s1len++;
-	for (i = 0; s2[i] != '\0'; i++)
-		s2len++;
-	output = malloc(sizeof(char) * (s1len + n) + 1);
-	if (output == NULL)
-		return (NULL);
-	if (n >= s2len)
-	{
-		for (i = 0; s1[i] != '\0'; i++)
-			output[i] = s1[i];
-		for (i = 0; s2[i] != '\0'; i++)
-			output[s2len + i] = s2[i];
-		output[s1len + i] = '\0';
-	}
+		i = 0;
 	else
 	{
 		for (i = 0; s1[i] != '\0'; i++)
-			output[i] = s1[i];
-		for (i = 0; i < n; i++)
-			output[s1len + i] = s2[i];
-		output[s1len + i] = '\0';
+			;
 	}
+
+	if (s2 == NULL)
+		j = 0;
+	else
+	{
+		for (j = 0; s2[j] != '\0'; j++)
+			;
+	}
+	if (j > n)
+		j = n;
+	output = malloc(sizeof(char) * (i + j + 1));
+	if (output == NULL)
+		return (NULL);
+	for (k = 0; k < i; k++)
+		output[k] = s1[k];
+	for (k = 0; k < j; k++)
+		output[k + i] = s2[k];
+	output[i + j] = '\0';
 	return (output);
+
 }
