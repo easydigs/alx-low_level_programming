@@ -5,15 +5,15 @@
  * int_index - function that searches for an integer
  *
  * @array: pointer to array
- * @size: size of @array
- * @cmp: function pointer
+ * @size: number of elements in the array
+ * @cmp: pointer to the function to be used to compare values
  *
  * Return: 0 (Success)
 */
 
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	int i; 
+	int i;
 	bool s;
 
 	if (array != NULL && size > 0 && cmp != NULL)
