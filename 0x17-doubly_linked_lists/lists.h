@@ -32,7 +32,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
 int f4(char *usrn, int len);
 int f5(char *usrn, int len);
 int f6(char *usrn);
-int main(int argc, char **argv);
 
 
 
