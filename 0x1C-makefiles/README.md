@@ -1,9 +1,8 @@
-#0x1C. C - Makefiles
+# 0x1C. C - Makefiles
 
+## Learning Objectives
 
-#Learning Objectives
-
-*General
+**General**
 
 - What are make, Makefiles
 - When, why and how to use Makefiles
